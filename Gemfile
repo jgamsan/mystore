@@ -32,6 +32,7 @@ group :production do
   gem 'capistrano-unicorn'
   gem 'foreman'
   gem 'therubyracer' #only required for 0.70.x or later
+  gem 'execjs'
 end
 # Use unicorn as the app server
 # gem 'unicorn'

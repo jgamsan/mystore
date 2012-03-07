@@ -22,7 +22,7 @@ role :db,  domain, :primary => true
 set :rails_env, "production"
 
 after 'deploy:update_code' do
-  run "cd /aplicacion_web/public_html/#{application}/current; RAILS_ENV=production rake assets:precompile"
+  run "cd #{release_path}; rake assets:precompile RAILS_ENV=production "
 end
 
 after "deploy", "deploy:cleanup"
