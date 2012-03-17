@@ -27,4 +27,4 @@ after 'deploy:update_code' do
 end
 
 after "deploy", "deploy:cleanup"
-
+require 'capistrano-unicorn'
